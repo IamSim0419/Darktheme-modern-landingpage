@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Stunning Dark Theme SaaS Landing Page is a sleek, high-quality, and customizable template built to present your SaaS product in the most engaging way possible. Whether you're launching a new product or looking to revamp your online presence, this template offers a powerful, visually appealing solution.
 
-## Getting Started
+# Key Features:
 
-First, run the development server:
+Modern Dark Theme: Provides a sleek, professional, and visually striking look.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Responsive Design: Fully optimized for desktops, tablets, and mobile devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Easy Customization: Simple to update with your brand colors, logos, and content.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Call-to-Action Sections: Strategic sections for encouraging conversions and sign-ups.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Smooth Animations: Subtle animations that enhance the user experience.
 
-## Learn More
+SEO Optimized: Structured with SEO best practices to improve your search ranking.
 
-To learn more about Next.js, take a look at the following resources:
+Fast Load Time: Optimized for speed to provide the best user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TyeScript
+Next.js
+React.js
+TailwindCSS
+Framer Mation
 
-## Deploy on Vercel
+# Dependencies Installed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm npm i tailwind-merge
+npm install --save-dev @svgr/webpack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# SVG's Turbopack to Webpack issue - next.config.ts
+
+https://stackoverflow.com/questions/79153360/configure-turbopack-to-load-svgs-according-to-resource-query
