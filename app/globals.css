@@ -24,3 +24,33 @@
 .gradient-bg {
   @apply bg-[linear-gradient(to_right,#FCD6FF,#29D8FF,#FFFD80,#F89ABF,#FCD6FF)]
 }
+
+/* Hero */
+.gradient-hero {
+  @apply bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] py-[72px]
+}
+
+/* Gradient text hero*/
+.clip-gradient-text {
+  @apply bg-gradient-to-r from-sky-500 via-yellow-500 to-emerald-500 text-transparent bg-clip-text [-webkit-background-clip:text]
+}
+
+/* Shape gradient effect in hero */
+.r-gradient-effect {
+  @apply  bg-[radial-gradient(closest-side,#000_82%,#9560EB)]
+}
+
+/* Logo ticker gradient blur effect */
+.blur-gradient-effect {
+  @apply relative before:content-[""] after:content-[""] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5  after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#000,rgba(0,0,0,0))] after:bg-[linear-gradient(to_left,#000,rgba(0,0,0,0))]
+}
+
+/* Product showcase gradient */
+.product-gradient {
+  @apply bg-gradient-to-b from-black to-[#5D2CAB]
+}
+
+/* Faqs gradient */
+.faqs-gradient {
+  @apply bg-gradient-to-b from-[#5D2CAB] to-black
+}

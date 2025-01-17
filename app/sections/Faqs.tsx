@@ -1,3 +1,10 @@
+"use client"
+
+import PlusIcon from "@/assets/icons/plus.svg";
+import MinusIcon from "@/assets/icons/minus.svg";
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+
 const items = [
   {
     question: "What payment methods do you accept?",
@@ -21,9 +28,42 @@ const items = [
   },
 ];
 
+function AccordionItem({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div 
+      className="py-7 border-b border-white/30"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex items-center">
+        <span className="flex-1 text-lg font-bold">{question}</span>
+        {isOpen ? <MinusIcon /> : <PlusIcon />}
+      </div>
+      <div className={twMerge("mt-4 text-white/70", isOpen ? "" : "hidden")}>{answer}</div>
+    </div>
+  );
+}
 
 export default function Faqs() {
   return (
-    <div>Faqs</div>
-  )
+    <section className="bg-black text-white faqs-gradient py-[72px] md:py-24">
+      <div className="container">
+        <h2 className="text-center text-5xl md:text-6xl md:max-w-xl mx-auto font-bold tracking-tighter">
+          Frequently asked questions
+        </h2>
+        <div className="mt-12 max-w-[648px] mx-auto">
+          {items.map(({ question, answer }) => (
+            <AccordionItem key={question} question={question} answer={answer} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
