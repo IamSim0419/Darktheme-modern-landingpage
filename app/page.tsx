@@ -10,7 +10,7 @@ import Footer from "@/app/sections/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-clip">
       <Banner />
       <Header />
       <Hero />
