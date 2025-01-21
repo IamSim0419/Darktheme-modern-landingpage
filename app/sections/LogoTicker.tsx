@@ -1,3 +1,5 @@
+"use client";
+
 import AcmeLogo from "@/assets/images/acme.png";
 import QuantumLogo from "@/assets/images/quantum.png";
 import EchoLogo from "@/assets/images/echo.png";
@@ -5,6 +7,7 @@ import CelestialLogo from "@/assets/images/celestial.png";
 import PulseLogo from "@/assets/images/pulse.png";
 import ApexLogo from "@/assets/images/apex.png";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const images = [
   { src: AcmeLogo, alt: "Acme Logo" },
@@ -20,9 +23,19 @@ export default function LogoTicker() {
     <section className="bg-black text-white py-[72px] md:py-24">
       <div className="container">
         <h2 className="text-xl text-center text-white/70">Trusted by leading innovative teams worldwide</h2>
-        <div className="overflow-hidden mt-9 blur-gradient-effect">
-          <div className="flex justify-center gap-16">
-            {images.map(({ src, alt }, idx) => (
+
+        {/* Logo images */}
+        <div className="flex overflow-hidden mt-9 blur-gradient-effect">
+          <motion.div 
+            initial={{ translateX: 0 }}
+            animate={{ translateX: "-50%" }}
+            transition={{
+              repeat: Infinity,
+              duration: 10,
+              ease: "linear",
+            }}
+            className="flex gap-16 flex-none pr-16">
+            {[...images, ...images].map(({ src, alt }, idx) => (
             <Image 
               src={src} 
               alt={alt} 
@@ -30,7 +43,7 @@ export default function LogoTicker() {
               className="flex-none h-8 w-auto" // flex-none ensures the image maintains its size
             />
             ))}
-          </div>
+          </motion.div>
         </div>
         
       </div>

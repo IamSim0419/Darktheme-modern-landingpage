@@ -1,7 +1,10 @@
+"use client";
+
 import ArrowIcon from "@/assets/icons/arrow-w.svg";
 import cursorImage from "@/assets/images/cursor.png";
 import messageImage from "@/assets/images/message.png";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
@@ -28,21 +31,37 @@ export default function Hero() {
             <h1 className="text-7xl md:text-9xl font-bold tracking-tighter  max-w-xs md:max-w-xl mx-auto">
               One Task at a Time
             </h1>
-            {/* Arrow and Message Icon effect */}
-            <Image
+
+            {/* Cursor Image and Message Icon effect */}
+            <motion.div
+              className="absolute right-[540px] top-[108px] hidden md:inline cursor-pointer"
+              drag
+              dragSnapToOrigin
+              >
+              <Image
               src={cursorImage}
               alt="Cursor image"
               height={200}
               width={200}
-              className="absolute right-[540px] top-[108px] hidden md:inline"
+              className="max-w-none" // max-w-none is used to remove the max-width: 100% from the image
+              draggable="false"
             />
-            <Image
-              src={messageImage}
-              alt="Message image"
-              height={200}
-              width={200}
-              className="absolute top-[55px] left-[498px] hidden md:inline"
-            />
+            </motion.div>
+            <motion.div
+              className="absolute top-[55px] left-[498px] hidden md:inline cursor-pointer"
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage}
+                alt="Message image"
+                height={200}
+                width={200}
+                className="max-w-none" // max-w-none is used to remove the max-width: 100% from the image
+                draggable="false"
+              />
+            </motion.div>
+            
         </div>
         </div>
         
