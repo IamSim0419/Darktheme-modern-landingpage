@@ -29,7 +29,7 @@ export default function Feature({ features }: FeatureProps) {
         return () => {
             window.removeEventListener("mousemove", updateMousePosition);
         }
-    }, []);
+    }, [ offsetX, offsetY ]);
 
   return (
     <div className="mt-16 flex flex-col md:flex-row gap-4">

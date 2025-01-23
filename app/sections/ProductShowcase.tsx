@@ -3,7 +3,7 @@
 import AppScreen from "@/assets/images/app-screen.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function ProductShowcase() {
   const imageRef = useRef<HTMLImageElement>(null);
