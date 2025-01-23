@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LogoImage from "@/assets/images/logosaas.png";
 import MenuIcon from "@/assets/icons/menu.svg"
+import Button from "../components/Button";
 
 const navigationItems = [
   {
@@ -47,7 +48,10 @@ export default function Header() {
                 {item.name}
               </a>
               ))}
-              <button className="bg-white py-2 px-4 rounded-lg">Get for free</button>
+
+              <Button>
+                Get for free
+              </Button>
             </div>
             
           </nav>

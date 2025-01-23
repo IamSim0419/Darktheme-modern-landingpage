@@ -5,6 +5,7 @@ import cursorImage from "@/assets/images/cursor.png";
 import messageImage from "@/assets/images/message.png";
 import Image from "next/image";
 import { motion } from "motion/react";
+import Button from "../components/Button";
 
 export default function Hero() {
   return (
@@ -71,9 +72,9 @@ export default function Hero() {
           monitor progress, inspire your endeavors, and applaud your victories.
         </p>
         <div className="flex justify-center mt-8">
-          <button className="bg-white text-black py-3 px-5 rounded-lg font-medium">
+          <Button className="text-xl md:text-2xl px-5">
             Get for free
-          </button>
+          </Button>
         </div>
       </div>
     </section>

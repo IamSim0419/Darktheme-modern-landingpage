@@ -3,7 +3,7 @@
 import PlusIcon from "@/assets/icons/plus.svg";
 import MinusIcon from "@/assets/icons/minus.svg";
 import { useState } from "react";
-import { twMerge } from "tailwind-merge";
+import { AnimatePresence, motion } from "framer-motion";
 
 const items = [
   {
@@ -39,14 +39,44 @@ const AccordionItem = ({
 
   return (
     <div 
-      className="py-7 border-b border-white/30"
+      className="py-7 border-b border-white/30 cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex items-center">
         <span className="flex-1 text-lg font-bold">{question}</span>
-        {isOpen ? <MinusIcon /> : <PlusIcon />}
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {isOpen ? <MinusIcon /> : <PlusIcon />}
+        </motion.div>
       </div>
-      <div className={twMerge("mt-4 text-white/70", isOpen ? "" : "hidden")}>{answer}</div>
+
+      <AnimatePresence>
+        {isOpen && (
+        <motion.div 
+          initial={{ 
+            opacity: 0, 
+            height: 0,
+            marginTop: 0, 
+          }}
+          animate={{ 
+            opacity: 1, 
+            height: "auto",
+            marginTop: "16px", 
+          }}
+          exit={{ 
+            opacity: 0, 
+            height: 0,
+            marginTop: 0,
+          }}
+        >
+          {answer}
+        </motion.div>
+        )} 
+      </AnimatePresence>
+      
     </div>
   );
 }

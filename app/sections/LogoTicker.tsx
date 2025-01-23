@@ -31,10 +31,10 @@ export default function LogoTicker() {
             animate={{ translateX: "-50%" }}
             transition={{
               repeat: Infinity,
-              duration: 10,
+              duration: 20,
               ease: "linear",
             }}
-            className="flex gap-16 flex-none pr-16">
+            className="flex flex-none gap-16 pr-16">
             {[...images, ...images].map(({ src, alt }, idx) => (
             <Image 
               src={src} 

@@ -1,4 +1,4 @@
-import EcoSystem from "@/assets/icons/ecosystem.svg"
+import Feature from "../components/Feature";
 
 const features = [
   {
@@ -28,21 +28,9 @@ export default function Features() {
           Take advantage of customizable lists, collaborative tools, and intelligent tracking all in one platform. Assign tasks, receive reminders, and effortlessly track your progress.
           </p>
         </div>
-        
-        <div className="mt-16 flex flex-col md:flex-row gap-4">
-          {features.map(({ title, description}) => (
-            <div 
-              key={title}
-              className="border border-white/30 px-5 py-10 text-center rounded-xl md:flex-1"
-            >
-              <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-                <EcoSystem />
-              </div>
-              <h3 className="mt-6 font-bold">{title}</h3>
-              <p className="mt-2 text-white/70">{description}</p>
-            </div>
-          ))}
-        </div>
+
+        {/* Featured Box */}
+        <Feature features={features} />
       </div>
     </section>
   )
